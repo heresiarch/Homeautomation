@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="it.baeyens.arduino.core.toolChain.release.54307033">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="it.baeyens.arduino.core.toolChain.release.54307033" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="it.baeyens.arduino.core.toolChain.release.54307033" name="Release" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="it.baeyens.arduino.core.toolChain.release.54307033.137976755" name="/" resourcePath="">
+						<toolChain id="it.baeyens.arduino.core.toolChain.release.200808740" name="Arduino Toolchain" superClass="it.baeyens.arduino.core.toolChain.release">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="it.baeyens.arduino.targetplatform.2118902253" name="Arduino Target" osList="all" superClass="it.baeyens.arduino.targetplatform"/>
+							<builder buildPath="${workspace_loc:/BME280IndoorNode}/Release" id="it.baeyens.arduino.sketch.builder.1357140972" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="it.baeyens.arduino.sketch.builder"/>
+							<tool id="it.baeyens.arduino.tool.sketch.compiler.cpp.1392029733" name="Arduino C++ Compiler" superClass="it.baeyens.arduino.tool.sketch.compiler.cpp">
+								<option id="it.baeyens.arduino.compiler.cpp.sketch.option.incpath.1474724911" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.cpp.sketch.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/WirelessHEX69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPIFlash}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/RFM69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280_Arduino_Library}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/LowPower}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM/src}&quot;"/>
+								</option>
+								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.2090303050" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
+							</tool>
+							<tool id="it.baeyens.arduino.tool.compiler.c.16555313" name="Arduino C Compiler" superClass="it.baeyens.arduino.tool.compiler.c">
+								<option id="it.baeyens.arduino.compiler.c.sketch.option.incpath.1768076948" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.c.sketch.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/WirelessHEX69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPIFlash}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/RFM69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280_Arduino_Library}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/LowPower}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM/src}&quot;"/>
+								</option>
+								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.1152996451" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
+							</tool>
+							<tool id="it.baeyens.arduino.tool.sketch.compiler.s.1646018683" name="Arduino Assembler" superClass="it.baeyens.arduino.tool.sketch.compiler.s">
+								<option id="it.baeyens.arduino.compiler.asm.sketch.option.incpath.711249929" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.asm.sketch.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/WirelessHEX69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPIFlash}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/RFM69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280_Arduino_Library}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/LowPower}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM/src}&quot;"/>
+								</option>
+								<inputType id="it.baeyens.arduino.compiler.S.sketch.input.959130587" name="Assembly source files" superClass="it.baeyens.arduino.compiler.S.sketch.input"/>
+							</tool>
+							<tool id="it.baeyens.arduino.tool.ar.138055934" name="Arduino archiver" superClass="it.baeyens.arduino.tool.ar"/>
+							<tool id="it.baeyens.arduino.tool.combine.693507395" name="Arduino combiner" superClass="it.baeyens.arduino.tool.combine"/>
+							<tool id="it.baeyens.arduino.tool.objcopy.eep.874834419" name="Arduino tool Create eeprom" superClass="it.baeyens.arduino.tool.objcopy.eep"/>
+							<tool id="it.baeyens.arduino.tool.size.1797225413" name="Arduino tool Print Size" superClass="it.baeyens.arduino.tool.size"/>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries**/._*|libraries/?*/c*/?*|libraries/?*/d*/?*|libraries/?*/D*/?*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="BME280IndoorNode.null.1720791686" name="BME280IndoorNode"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+</cproject>
