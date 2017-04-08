@@ -73,6 +73,7 @@ BME280 mySensor;
 // https://lowpowerlab.com/forum/low-power-techniques/battery-monitorsensing-ratio-calculation-on-motionmoteweathershield/
 #define BATT_FORMULA(reading) reading * 0.0032 * 5.7
 #define CYCLE_INTERVAL_SEC  600
+//#define CYCLE_INTERVAL_SEC  5
 
 void setup () {
 
@@ -131,6 +132,8 @@ void loop ()
   radio.encrypt(ENCRYPTKEY);
   #ifdef IS_RFM69HW
    	  radio.setHighPower(true); //uncomment only for RFM69HW!
+   	  //https://lowpowerlab.com/forum/rf-range-antennas-rfm69-library/is-there-a-table-showing-tx-power-(in-dbm)-for-each-setpowerlevel(-)-value/
+   	  //radio.setPowerLevel(20);
   #endif
   sendMessage(sendBuf);
 
