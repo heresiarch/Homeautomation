@@ -58,6 +58,14 @@ char ENCRYPTKEY[16]; //exactly the same 16 characters/bytes on all nodes!
     SPIFlash flash(FLASH_SS, 0xEF30); //EF30 for 4mbit  Windbond chip (W25X40CL)
 #endif
 
+// Motion Logic
+#define MOTION_PIN     3  // D3
+#define MOTION_IRQ 1 // hardware interrupt 1 (D3) - where motion sensors OUTput is connected, this will generate an interrupt every time there is MOTION
+volatile boolean motionDetected=false;
+#define DUPLICATE_INTERVAL 5000 //avoid duplicates
+
+#define BATT_INTERVAL 600000 // read and report battery voltage every this many ms (approx)
+
 // each Message has additional monotonic session Key
 uint32_t sessionKey = 0;
 char sendBuf[50];
@@ -99,64 +107,77 @@ void setup () {
     pinMode(i, OUTPUT);
     digitalWrite(i, LOW);
   }
+
+  pinMode(MOTION_PIN, INPUT);
+  attachInterrupt(MOTION_IRQ, motionIRQ, RISING);
+  pinMode(LED, OUTPUT);
 }
 
-#define power_twi_enable()      (PRR &= (uint8_t)~(1 << PRTWI))
-#define power_twi_disable()     (PRR |= (uint8_t)(1 << PRTWI))
+
+void motionIRQ()
+{
+  motionDetected=true;
+}
 
 bool battFlag = true;
 
+uint16_t batteryReportCycles=0;
+uint32_t time=0, now=0, MLO=0, BLO=0;
+byte motionRecentlyCycles=0;
+
 void loop ()
 {
-
-	Serial.begin(115200);
-	uint32_t test = incrementSessionKey();
-	Serial.println(test);
+	Serial.begin(SERIAL_BAUD);
+	now = millis();
+	if (motionDetected && (time-MLO > DUPLICATE_INTERVAL))
+	{
+		Serial.println("********Motion*****");
+		Serial.flush();
+		digitalWrite(LED, HIGH);
+	    MLO = time; //save timestamp of event
+	    digitalWrite(LED, LOW);
+	    incrementSessionKey();
+	    sprintf(sendBuf, "{\"i\":%d,\"s\":3,\"m\":1,\"sk\":%lu}",NODEID,sessionKey);
+	    sendMessage(sendBuf);
+	    radio.sleep();
+	}
+	else if (time-BLO > BATT_INTERVAL)
+	{
+		BLO = time;
+	    batteryReportCycles=0;
+	    radio.initialize(FREQUENCY,NODEID,NETWORKID);
+	    radio.encrypt(ENCRYPTKEY);
+	    #ifdef IS_RFM69HW
+	    	  radio.setHighPower(true); //uncomment only for RFM69HW!
+	       	  //https://lowpowerlab.com/forum/rf-range-antennas-rfm69-library/is-there-a-table-showing-tx-power-(in-dbm)-for-each-setpowerlevel(-)-value/
+	       	  //radio.setPowerLevel(20);
+	    #endif
+	    char BATstr[10];
+	    float volts = getBatteryVoltage();
+	    dtostrf(volts, 3,2, BATstr); //update the BATStr which gets sent every BATT_CYCLES or along with the MOTION message
+	    sprintf(sendBuf, "{\"i\":%d,\"s\":2,\"bat\":%s}",NODEID,BATstr);
+	    sendMessage(sendBuf);
+	    radio.sleep();
+	}
+	  //while motion recently happened sleep for small slots of time to better approximate last motion event
+	  //this helps with debouncing a "MOTION" event more accurately for sensors that fire the IRQ very rapidly (ie panasonic sensors)
+	  if (motionDetected ||motionRecentlyCycles>0)
+	  {
+	    if (motionDetected) motionRecentlyCycles=8;
+	    else motionRecentlyCycles--;
+	    motionDetected=false; //do NOT move this after the SLEEP line below or motion will never be detected
+	    time = time + 250 + millis()-now;
+	    radio.sleep();
+	    LowPower.powerDown(SLEEP_250MS, ADC_OFF, BOD_OFF);
+	  }
+	  else
+	  {
+	    time = time + 8000 + millis()-now;
+	    radio.sleep();
+	    LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
+	  }
+	batteryReportCycles++;
 	Serial.flush();
-	delay(20);
-
-	/*
-
-
-  delay(20);
-  radio.initialize(FREQUENCY,NODEID,NETWORKID);
-  radio.encrypt(ENCRYPTKEY);
-  #ifdef IS_RFM69HW
-   	  radio.setHighPower(true); //uncomment only for RFM69HW!
-   	  //https://lowpowerlab.com/forum/rf-range-antennas-rfm69-library/is-there-a-table-showing-tx-power-(in-dbm)-for-each-setpowerlevel(-)-value/
-   	  //radio.setPowerLevel(20);
-  #endif
-  //sendMessage(sendBuf);
-
-  // report Battery state every other
-  if(battFlag)
-  {
-	  char BATstr[10];
-	  float volts = getBatteryVoltage();
-	  dtostrf(volts, 3,2, BATstr); //update the BATStr which gets sent every BATT_CYCLES or along with the MOTION message
-	  sprintf(sendBuf, "{\"i\":%d,\"s\":2,\"bat\":%s}",NODEID,BATstr);
-	  sendMessage(sendBuf);
-	  battFlag = false;
-  }
-  else
-  {
-	  battFlag = true;
-  }
-  radio.sleep();
-  //sleep TWI
-  TWCR &= ~(_BV(TWEN) | _BV(TWIE) | _BV(TWEA));
-  // saves ~ 160uAmps, Wire keeps the internal pullups running!!!
-  digitalWrite(SDA, 0);
-  digitalWrite(SCL, 0);
-  power_twi_disable();
-  int counter = 0;
-  while(counter < CYCLE_INTERVAL_SEC)
-  {
-	  LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
-	  counter+=8;
-  }
-  power_twi_enable();
-  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA);*/
 }
 
 bool sendMessage(const char* buff)
@@ -188,31 +209,26 @@ float getBatteryVoltage()
 
 uint32_t incrementSessionKey()
 {
-
 	union
 	{
-		byte b[2];
-		uint16_t high;
+		byte b[4];
+		uint16_t low;
+		uint32_t key;
 	} data;
-	uint16_t lowPart = sessionKey & 0xffff;
 
+	uint16_t lowPart = sessionKey & 0xffff;
 	// increase EEPROM after reset or if lower part overflows
 	if(sessionKey == 0 || lowPart == 0xffff )
 	{
-		for(int i = 0; i < 2; i++)
-		{
-				data.b[i] = EEPROM.read(i+16+1);
-		}
-		if(!sessionKey == 0)
-			data.high = data.high + 1;
-		for(int i = 0; i < 2; i++)
-		{
-		   	EEPROM.write(i + 16 +1,data.b[i]);
-		}
+		data.key = 0;
+		data.b[0] = EEPROM.read(17);
+		data.b[1] = EEPROM.read(18);
+		data.low++;
+		EEPROM.put(17,data.low);
 		sessionKey = 0;
-		sessionKey |= data.high;
+		sessionKey |= data.key;
 		sessionKey <<= 16;
 	}
-	sessionKey++;
+	sessionKey+=1;
 	return sessionKey;
 }
