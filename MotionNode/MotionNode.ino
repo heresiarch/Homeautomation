@@ -62,9 +62,9 @@ char ENCRYPTKEY[16]; //exactly the same 16 characters/bytes on all nodes!
 #define MOTION_PIN     3  // D3
 #define MOTION_IRQ 1 // hardware interrupt 1 (D3) - where motion sensors OUTput is connected, this will generate an interrupt every time there is MOTION
 volatile boolean motionDetected=false;
-#define DUPLICATE_INTERVAL 5000 //avoid duplicates
+#define DUPLICATE_INTERVAL 10000 //avoid duplicates
 
-#define BATT_INTERVAL 600000 // read and report battery voltage every this many ms (approx)
+#define BATT_INTERVAL 600000 * 2 // read and report battery voltage every this many ms (approx)
 
 // each Message has additional monotonic session Key
 uint32_t sessionKey = 0;
@@ -127,17 +127,21 @@ byte motionRecentlyCycles=0;
 
 void loop ()
 {
-	Serial.begin(SERIAL_BAUD);
+	//Serial.begin(SERIAL_BAUD);
 	now = millis();
 	if (motionDetected && (time-MLO > DUPLICATE_INTERVAL))
 	{
-		Serial.println("********Motion*****");
-		Serial.flush();
-		digitalWrite(LED, HIGH);
-	    MLO = time; //save timestamp of event
-	    digitalWrite(LED, LOW);
+		radio.initialize(FREQUENCY,NODEID,NETWORKID);
+		radio.encrypt(ENCRYPTKEY);
+		#ifdef IS_RFM69HW
+			radio.setHighPower(true); //uncomment only for RFM69HW!
+		    //https://lowpowerlab.com/forum/rf-range-antennas-rfm69-library/is-there-a-table-showing-tx-power-(in-dbm)-for-each-setpowerlevel(-)-value/
+		 	radio.setPowerLevel(20);
+		#endif
+		MLO = time; //save timestamp of event
 	    incrementSessionKey();
 	    sprintf(sendBuf, "{\"i\":%d,\"s\":3,\"m\":1,\"sk\":%lu}",NODEID,sessionKey);
+	    radio.setPowerLevel(16);
 	    sendMessage(sendBuf);
 	    radio.sleep();
 	}
@@ -150,7 +154,7 @@ void loop ()
 	    #ifdef IS_RFM69HW
 	    	  radio.setHighPower(true); //uncomment only for RFM69HW!
 	       	  //https://lowpowerlab.com/forum/rf-range-antennas-rfm69-library/is-there-a-table-showing-tx-power-(in-dbm)-for-each-setpowerlevel(-)-value/
-	       	  //radio.setPowerLevel(20);
+	       	  radio.setPowerLevel(16);
 	    #endif
 	    char BATstr[10];
 	    float volts = getBatteryVoltage();
