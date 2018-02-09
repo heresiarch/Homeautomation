@@ -14,71 +14,71 @@
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 				<configuration artifactName="${ProjName}" buildProperties="" description="" id="it.baeyens.arduino.core.toolChain.release.54307033" name="Release" parent="org.eclipse.cdt.build.core.emptycfg">
 					<folderInfo id="it.baeyens.arduino.core.toolChain.release.54307033.137976755" name="/" resourcePath="">
-						<toolChain id="it.baeyens.arduino.core.toolChain.release.200808740" name="Arduino Toolchain" superClass="it.baeyens.arduino.core.toolChain.release">
-							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="it.baeyens.arduino.targetplatform.2118902253" name="Arduino Target" osList="all" superClass="it.baeyens.arduino.targetplatform"/>
-							<builder buildPath="${workspace_loc:/BME280IndoorNode}/Release" id="it.baeyens.arduino.sketch.builder.1357140972" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="it.baeyens.arduino.sketch.builder"/>
-							<tool id="it.baeyens.arduino.tool.sketch.compiler.cpp.1392029733" name="Arduino C++ Compiler" superClass="it.baeyens.arduino.tool.sketch.compiler.cpp">
-								<option id="it.baeyens.arduino.compiler.cpp.sketch.option.incpath.1474724911" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.cpp.sketch.option.incpath" valueType="includePath">
+						<toolChain id="io.sloeber.core.toolChain.release.205474444" name="Arduino Toolchain (Sloeber edition)" superClass="io.sloeber.core.toolChain.release">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="io.sloeber.targetplatform.1904711732" name="Arduino Target" osList="all" superClass="io.sloeber.targetplatform"/>
+							<builder buildPath="${workspace_loc:/BME280IndoorNode}/Release" id="io.sloeber.sketch.builder.1794674444" keepEnvironmentInBuildfile="false" name="Arduino sketch builder" superClass="io.sloeber.sketch.builder"/>
+							<tool id="io.sloeber.tool.sketch.compiler.cpp.1919805997" name="Arduino C++ Compiler" superClass="io.sloeber.tool.sketch.compiler.cpp">
+								<option id="io.sloeber.compiler.cpp.sketch.option.incpath.1017101252" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/variant}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/WirelessHEX69}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPIFlash}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/RFM69}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280_Arduino_Library}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/LowPower}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/LowPower}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/RFM69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPIFlash}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire/src}&quot;"/>
 								</option>
-								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.2090303050" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
+								<inputType id="io.sloeber.compiler.cpp.sketch.input.1409765968" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
-							<tool id="it.baeyens.arduino.tool.compiler.c.16555313" name="Arduino C Compiler" superClass="it.baeyens.arduino.tool.compiler.c">
-								<option id="it.baeyens.arduino.compiler.c.sketch.option.incpath.1768076948" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.c.sketch.option.incpath" valueType="includePath">
+							<tool id="io.sloeber.tool.compiler.c.1111443648" name="Arduino C Compiler" superClass="io.sloeber.tool.compiler.c">
+								<option id="io.sloeber.compiler.c.sketch.option.incpath.668567828" name="Include Paths (-I)" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/variant}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/WirelessHEX69}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPIFlash}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/RFM69}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280_Arduino_Library}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/LowPower}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/LowPower}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/RFM69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPIFlash}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire/src}&quot;"/>
 								</option>
-								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.1152996451" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
+								<inputType id="io.sloeber.compiler.c.sketch.input.2039787198" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
-							<tool id="it.baeyens.arduino.tool.sketch.compiler.s.1646018683" name="Arduino Assembler" superClass="it.baeyens.arduino.tool.sketch.compiler.s">
-								<option id="it.baeyens.arduino.compiler.asm.sketch.option.incpath.711249929" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.asm.sketch.option.incpath" valueType="includePath">
+							<tool id="io.sloeber.tool.sketch.compiler.s.1325872320" name="Arduino Assembler" superClass="io.sloeber.tool.sketch.compiler.s">
+								<option id="io.sloeber.compiler.asm.sketch.option.incpath.1208127064" name="Include Paths (-I)" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/core/variant}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/WirelessHEX69}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPIFlash}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/RFM69}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280_Arduino_Library}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/LowPower}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/EEPROM/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/LowPower}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/RFM69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPIFlash}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SPI/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/SparkFun_BME280/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BME280IndoorNode/libraries/Wire/src}&quot;"/>
 								</option>
-								<inputType id="it.baeyens.arduino.compiler.S.sketch.input.959130587" name="Assembly source files" superClass="it.baeyens.arduino.compiler.S.sketch.input"/>
+								<inputType id="io.sloeber.compiler.S.sketch.input.1096272739" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>
-							<tool id="it.baeyens.arduino.tool.ar.138055934" name="Arduino archiver" superClass="it.baeyens.arduino.tool.ar"/>
-							<tool id="it.baeyens.arduino.tool.combine.693507395" name="Arduino combiner" superClass="it.baeyens.arduino.tool.combine"/>
-							<tool id="it.baeyens.arduino.tool.objcopy.eep.874834419" name="Arduino tool Create eeprom" superClass="it.baeyens.arduino.tool.objcopy.eep"/>
-							<tool id="it.baeyens.arduino.tool.size.1797225413" name="Arduino tool Print Size" superClass="it.baeyens.arduino.tool.size"/>
+							<tool id="io.sloeber.tool.ar.1051523331" name="Arduino archiver" superClass="io.sloeber.tool.ar"/>
+							<tool id="io.sloeber.tool.combine.1231501752" name="Arduino combiner" superClass="io.sloeber.tool.combine"/>
+							<tool id="io.sloeber.tool.objcopy.eep.505656340" name="Arduino tool Create eeprom" superClass="io.sloeber.tool.objcopy.eep"/>
+							<tool id="io.sloeber.tool.size.96505377" name="Arduino tool Print Size" superClass="io.sloeber.tool.size"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries**/._*|libraries/?*/c*/?*|libraries/?*/d*/?*|libraries/?*/D*/?*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+						<entry excluding="libraries/SPIFlash/.git|libraries/RFM69/.git|libraries/LowPower/.git|libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries**/._*|libraries/?*/c*/?*|libraries/?*/d*/?*|libraries/?*/D*/?*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -92,5 +92,11 @@
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/BME280IndoorNode"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

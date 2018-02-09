@@ -6,7 +6,12 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>it.baeyens.arduino.core.inoToCpp</name>
+			<name>io.sloeber.core.inoToCpp</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>io.sloeber.arduino.core.inoToCpp</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -28,58 +33,53 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
-		<nature>it.baeyens.arduinonature</nature>
+		<nature>io.sloeber.arduinonature</nature>
 	</natures>
 	<linkedResources>
 		<link>
 			<name>core/core</name>
 			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/packages/arduino/hardware/avr/1.6.13/cores/arduino</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.20/cores/arduino</locationURI>
 		</link>
 		<link>
 			<name>core/variant</name>
 			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/packages/arduino/hardware/avr/1.6.13/variants/standard</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.20/variants/standard</locationURI>
 		</link>
 		<link>
 			<name>libraries/EEPROM</name>
 			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/packages/arduino/hardware/avr/1.6.13/libraries/EEPROM</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.20/libraries/EEPROM</locationURI>
 		</link>
 		<link>
 			<name>libraries/LowPower</name>
 			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/libraries/LowPower/1.0.0</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/LowPower/1.0.0</locationURI>
 		</link>
 		<link>
 			<name>libraries/RFM69</name>
 			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/libraries/RFM69/1.0.0</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/RFM69/1.0.0</locationURI>
 		</link>
 		<link>
 			<name>libraries/SPI</name>
 			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/packages/arduino/hardware/avr/1.6.13/libraries/SPI</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.20/libraries/SPI</locationURI>
 		</link>
 		<link>
 			<name>libraries/SPIFlash</name>
 			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/libraries/SPIFlash/1.0.0</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/SPIFlash/1.0.0</locationURI>
 		</link>
 		<link>
-			<name>libraries/SparkFun_BME280_Arduino_Library</name>
+			<name>libraries/SparkFun_BME280</name>
 			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/libraries/SparkFun_BME280_Arduino_Library/1.0.0</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/SparkFun_BME280/1.2.0</locationURI>
 		</link>
 		<link>
 			<name>libraries/Wire</name>
 			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/packages/arduino/hardware/avr/1.6.13/libraries/Wire</location>
-		</link>
-		<link>
-			<name>libraries/WirelessHEX69</name>
-			<type>2</type>
-			<location>/opt/sloeber/arduinoPlugin/libraries/WirelessHEX69/1.0.0</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.20/libraries/Wire</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
