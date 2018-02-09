@@ -138,7 +138,7 @@ void loop() {
     	// wake all low power sleep nodes
     	nodeMsg.cmd = 'w';
     	nodeMsg.secKey = sessionKey;
-        //radio.listenModeSendBurst(id, (char*)&nodeMsg, sizeof(NodeMsg));
+        radio.listenModeSendBurst(id, (char*)&nodeMsg, sizeof(NodeMsg));
         delay(250);
         radio.initialize(FREQUENCY,NODEID,NETWORKID);
         #ifdef IS_RFM69HW

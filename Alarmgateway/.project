@@ -57,9 +57,9 @@
 			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.20/libraries/EEPROM</locationURI>
 		</link>
 		<link>
-			<name>libraries/RFM69</name>
+			<name>libraries/RFM69Listen</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/RFM69/1.0.0</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/libraries/RFM69Listen/1.0.0</locationURI>
 		</link>
 		<link>
 			<name>libraries/SPI</name>

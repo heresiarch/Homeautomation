@@ -25,10 +25,10 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/EEPROM/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPI/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPIFlash}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/ArduinoJson}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/ArduinoJson/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/RFM69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/RFM69Listen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPIFlash}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.cpp.sketch.input.572675616" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
@@ -40,10 +40,10 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/EEPROM/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPI/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPIFlash}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/ArduinoJson}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/ArduinoJson/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/RFM69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/RFM69Listen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPIFlash}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.c.sketch.input.1215304790" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
@@ -55,10 +55,10 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/EEPROM/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPI/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPIFlash}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/ArduinoJson}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/ArduinoJson/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/RFM69}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/RFM69Listen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Alarmgateway/libraries/SPIFlash}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.S.sketch.input.1597767340" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>
