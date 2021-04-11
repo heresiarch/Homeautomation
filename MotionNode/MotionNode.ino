@@ -62,9 +62,9 @@ char ENCRYPTKEY[16]; //exactly the same 16 characters/bytes on all nodes!
 #define MOTION_PIN     3  // D3
 #define MOTION_IRQ 1 // hardware interrupt 1 (D3) - where motion sensors OUTput is connected, this will generate an interrupt every time there is MOTION
 volatile boolean motionDetected=false;
-#define DUPLICATE_INTERVAL 10000 //avoid duplicates
+#define DUPLICATE_INTERVAL 90000 //avoid duplicates
 
-#define BATT_INTERVAL 600000 * 2 // read and report battery voltage every this many ms (approx)
+#define BATT_INTERVAL 3600000 // read and report battery voltage every this many ms (approx)
 
 // each Message has additional monotonic session Key
 uint32_t sessionKey = 0;
@@ -73,8 +73,6 @@ char sendBuf[50];
 // we use 4.7M and 1M 1% resistors = 1/(1000/(4700+1000)) see also here
 // https://lowpowerlab.com/forum/low-power-techniques/battery-monitorsensing-ratio-calculation-on-motionmoteweathershield/
 #define BATT_FORMULA(reading) reading * 0.0032 * 5.7
-
-#define CYCLE_INTERVAL_SEC  600
 
 void setup () {
 
@@ -233,6 +231,11 @@ uint32_t incrementSessionKey()
 		sessionKey |= data.key;
 		sessionKey <<= 16;
 	}
-	sessionKey+=1;
+	else
+	{
+		sessionKey+=1;
+	}
 	return sessionKey;
 }
+
+
