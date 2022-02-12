@@ -50,9 +50,6 @@ char ENCRYPTKEY[16];
 // the secure session key
 unsigned long sessionKey = 0;
 
-SPIFlash flash(FLASH_SS, 0xEF30); //EF30 for 4mbit  Windbond chip (W25X40CL)
-bool promiscuousMode = false; //set to 'true' to sniff all packets on the same network
-
 void setup() {
    // Node ID and Encryption Key in EEPROM
    EEPROM.begin();
@@ -71,7 +68,7 @@ void setup() {
   radio.setHighPower(); //only for RFM69HW!
 #endif
   radio.encrypt(ENCRYPTKEY);
-  radio.promiscuous(promiscuousMode);
+  radio.spyMode(true);
   char buff[50];
   sprintf(buff, "\nListening at %d Mhz...", FREQUENCY==RF69_433MHZ ? 433 : FREQUENCY==RF69_868MHZ ? 868 : 915);
   Serial.println(buff);

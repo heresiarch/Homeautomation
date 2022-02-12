@@ -2,7 +2,7 @@
 //This is a automatic generated file
 //Please do not modify this file
 //If you touch this file your change will be overwritten during the next build
-//This file has been generated on 2018-02-09 12:50:46
+//This file has been generated on 2022-01-03 10:27:15
 
 #include "Arduino.h"
 #include <RFM69.h>

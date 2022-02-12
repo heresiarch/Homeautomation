@@ -18,7 +18,7 @@
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="io.sloeber.targetplatform.1776687940" name="Arduino Target" osList="all" superClass="io.sloeber.targetplatform"/>
 							<builder buildPath="${workspace_loc:/DualMotionNode}/Release" id="io.sloeber.sketch.builder.174364813" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="io.sloeber.sketch.builder"/>
 							<tool id="io.sloeber.tool.sketch.compiler.cpp.398128435" name="Arduino C++ Compiler" superClass="io.sloeber.tool.sketch.compiler.cpp">
-								<option id="io.sloeber.compiler.cpp.sketch.option.incpath.898046092" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.cpp.sketch.option.incpath.898046092" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/ArduinoJson}&quot;"/>
@@ -36,11 +36,14 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/Wire/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/PinChangeInterrupt}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/PinChangeInterrupt/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/LowPower_LowPowerLab}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/RFM69_LowPowerLab}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/SPIFlash_LowPowerLab}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.cpp.sketch.input.462372081" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
 							<tool id="io.sloeber.tool.compiler.c.142875097" name="Arduino C Compiler" superClass="io.sloeber.tool.compiler.c">
-								<option id="io.sloeber.compiler.c.sketch.option.incpath.2132797357" name="Include Paths (-I)" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.c.sketch.option.incpath.2132797357" name="Include Paths (-I)" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/ArduinoJson}&quot;"/>
@@ -58,11 +61,14 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/Wire/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/PinChangeInterrupt}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/PinChangeInterrupt/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/LowPower_LowPowerLab}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/RFM69_LowPowerLab}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/SPIFlash_LowPowerLab}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.c.sketch.input.270071632" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
 							<tool id="io.sloeber.tool.sketch.compiler.s.17569617" name="Arduino Assembler" superClass="io.sloeber.tool.sketch.compiler.s">
-								<option id="io.sloeber.compiler.asm.sketch.option.incpath.966513374" name="Include Paths (-I)" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.asm.sketch.option.incpath.966513374" name="Include Paths (-I)" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/ArduinoJson}&quot;"/>
@@ -80,6 +86,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/Wire/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/PinChangeInterrupt}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/PinChangeInterrupt/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/LowPower_LowPowerLab}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/RFM69_LowPowerLab}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/DualMotionNode/libraries/SPIFlash_LowPowerLab}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.S.sketch.input.557238585" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>
