@@ -144,7 +144,9 @@ void enableBME280(const bool enable)
 
 void setupBME280()
 {
-		//***Driver settings********************************//
+	Wire.begin();
+ 	Wire.setClock(400000);
+	//***Driver settings********************************//
 	//commInterface can be I2C_MODE or SPI_MODE
 	//specify chipSelectPin using arduino pin names
 	//specify I2C address.  Can be 0x77(default) or 0x76
@@ -227,6 +229,7 @@ void loop ()
   setupBME280();
   float temp = mySensor.readTempC();
   float rh = mySensor.readFloatHumidity();
+  Serial.println(temp);
   mySensor.writeRegister(BME280_CTRL_MEAS_REG, 0x00); //sleep the BME280
   enableBME280(false);
   char str_temp[6];
@@ -235,6 +238,7 @@ void loop ()
   dtostrf(temp, 2, 1, str_temp);
   dtostrf(rh, 2, 0, str_rh);
   sprintf(sendBuf, "{\"i\":%d,\"s\":1,\"t\":%s,\"h\":%s}",NODEID,str_temp, str_rh);
+  Serial.println(sendBuf);
   radio.initialize(FREQUENCY,NODEID,NETWORKID);
   radio.encrypt(ENCRYPTKEY);
   #ifdef IS_RFM69HW
